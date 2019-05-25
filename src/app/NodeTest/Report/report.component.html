@@ -1,0 +1,83 @@
+<div id="forms" class="page-layout simple fullwidth" fxLayout="column">
+
+ 
+  <!-- CONTENT -->
+  <div class="content p-24">
+  <div fxFlexOrder="2">
+    <div class="example-container mat-elevation-z8">
+      
+      <div class="example-header">
+        <mat-form-field fxFlex="50">
+          <input matInput (blur)="BindUsersDdl()"   [owlDateTimeTrigger]="ftend" [owlDateTime]="ftend" [(ngModel)]="filterDateTimeModel" placeholder="Choose a date">
+              <owl-date-time #ftend ></owl-date-time>
+        </mat-form-field>
+      </div>
+
+      <mat-table [dataSource]="dataSource" #table [class.isMobile]="isMobile" matSort>
+
+          
+        <ng-container matColumnDef="UserName">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>User Name</mat-header-cell>
+            <mat-cell  *matCellDef="let row">
+                  <span class="mobile-label">User Name</span>
+                {{row.userName}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="Occupide Hours">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Occupide Hours</mat-header-cell>
+              <mat-cell *matCellDef="let row">
+                  <span class="mobile-label">Occupide Hours</span>
+                {{row.Occupied}} 
+
+              </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="Available Hours">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Available Hours</mat-header-cell>
+              <mat-cell *matCellDef="let row">
+                  <span class="mobile-label">Available Hours</span>
+                {{row.available}} 
+
+              </mat-cell>
+            </ng-container>
+          
+
+<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedColumns;">
+</mat-row>
+</mat-table>
+
+   
+      <mat-paginator [pageSizeOptions]="[5,10, 25, 100]"></mat-paginator>
+    </div>
+  </div>
+
+
+  </div>
+  <!-- / CONTENT -->
+
+</div>
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
