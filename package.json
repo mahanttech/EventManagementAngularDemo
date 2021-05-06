@@ -65,7 +65,7 @@
     "rxjs-compat": "6.2.2",
     "swagger": "0.7.5",
     "swagger-angular-generator": "4.0.0",
-    "underscore": "1.9.1",
+    "underscore": "1.12.1",
     "web-animations-js": "2.3.1",
     "zone.js": "0.8.26"
   },
